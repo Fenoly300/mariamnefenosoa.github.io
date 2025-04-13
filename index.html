@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariamne fenosoa</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#6366f1',secondary:'#8b5cf6'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #7b7d7f;
+        }
+        .heading {
+            font-family: 'Playfair Display', serif;
+        }
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            width: 20px;
+            height: 20px;
+            background-color: #6366f1;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: -29px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #d1d5db;
+            z-index: 0;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #6366f1;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        input[type="range"] {
+            appearance: none;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 999px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="w-full bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800 font-['Playfair_Display']">Mariamne Fenosoa<span class="text-primary">.</span></h1>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="#about" class="text-gray-700 hover:text-primary transition">À propos</a></li>
+                    <li><a href="#experience" class="text-gray-700 hover:text-primary transition">Expériences</a></li>
+                    <li><a href="#skills" class="text-gray-700 hover:text-primary transition">Compétences</a></li>
+                    <li><a href="#interests" class="text-gray-700 hover:text-primary transition">Centres d'intérêt</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-primary transition">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative w-full py-20 overflow-hidden" style="background-image: url('https://public.readdy.ai/ai/img_res/6c605148754f304cf54b4d2084a656dd.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-white/40"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 heading text-gray-900">Mariamne Fenosoa</h1>
+                    <h2 class="text-xl md:text-2xl font-medium mb-6 text-primary">Communication Numérique & Management de Projet</h2>
+                    <p class="text-gray-700 mb-8 max-w-lg">Étudiante passionnée et dotée d'un bon sens relationnel, je souhaite mettre mes compétences au service de votre entreprise pour créer des stratégies de communication innovantes et efficaces.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="px-6 py-3 bg-primary text-white font-medium !rounded-button hover:bg-primary/90 transition shadow-sm whitespace-nowrap">Me contacter</a>
+                        <a href="#experience" class="px-6 py-3 border border-gray-300 text-gray-700 font-medium !rounded-button hover:bg-gray-50 transition whitespace-nowrap">Voir mon parcours</a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                            <img src="fenosoamariamne.png" alt="Mariamne Nefenosoa" class="w-full h-full object-cover object-top">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-white rounded-full p-3 shadow-md">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-full text-white">
+                                <i class="ri-user-line ri-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 heading text-gray-900">À propos de moi</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-700">Actuellement en Master One en Communication Numérique et Management de Projet, je suis passionnée par les stratégies de communication innovantes et la gestion de projets numériques. Mon parcours académique et mes expériences professionnelles m'ont permis de développer une solide compréhension des enjeux de la communication organisationnelle et des relations publiques.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4">
+                        <i class="ri-graduation-cap-line ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Formation</h3>
+                    <p class="text-gray-700">Master en Communication Numérique avec une spécialisation en management de projet et stratégies digitales.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4">
+                        <i class="ri-briefcase-line ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Expérience</h3>
+                    <p class="text-gray-700">Stages professionnels dans le secteur public et médiatique, avec une expérience en documentation et communication.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4">
+                        <i class="ri-target-line ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Objectif</h3>
+                    <p class="text-gray-700">Contribuer au développement de stratégies de communication efficaces et innovantes au sein d'organisations dynamiques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4 heading text-center text-gray-900">Expériences & Projets</h2>
+            <div class="w-20 h-1 bg-primary mx-auto mb-12"></div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="relative pl-12 pb-12 timeline-line">
+                    <div class="relative timeline-dot mb-8">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-3">
+                                    <i class="ri-calendar-line ri-lg"></i>
+                                </div>
+                                <span class="text-sm font-medium text-gray-500">Juin 2024 - Septembre 2024</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Stage en Communication</h3>
+                            <h4 class="text-primary font-medium mb-3">Radio Télé Catholique Masôva</h4>
+                            <p class="text-gray-700">Stage de trois mois où j'ai contribué à la création de contenu médiatique, à la gestion des réseaux sociaux et à l'organisation d'événements de communication. J'ai développé des compétences en production audiovisuelle et en stratégie de communication digitale.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative timeline-dot mb-8">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-3">
+                                    <i class="ri-calendar-line ri-lg"></i>
+                                </div>
+                                <span class="text-sm font-medium text-gray-500">2024 - 2025</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Master One en Communication Numérique et Management de Projet</h3>
+                            <h4 class="text-primary font-medium mb-3">Université de Fianarantsoa</h4>
+                            <p class="text-gray-700">Formation avancée en stratégies de communication digitale, gestion de projet numérique, marketing digital et analyse de données. Développement de compétences en leadership et en gestion d'équipe.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative timeline-dot mb-8">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-3">
+                                    <i class="ri-calendar-line ri-lg"></i>
+                                </div>
+                                <span class="text-sm font-medium text-gray-500">Juin 2023 - Août 2023</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Stage au Service de Législation Documentation Contentieux</h3>
+                            <h4 class="text-primary font-medium mb-3">Ministère de l'Enseignement Technique et Professionnelle</h4>
+                            <p class="text-gray-700">Stage de deux mois où j'ai assisté à la gestion documentaire, à l'organisation des archives et à la rédaction de rapports administratifs. J'ai acquis une expérience précieuse dans la communication institutionnelle et la gestion de l'information.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative timeline-dot">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-3">
+                                    <i class="ri-calendar-line ri-lg"></i>
+                                </div>
+                                <span class="text-sm font-medium text-gray-500">2021 - 2024</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Licence en Relations Publiques et Communication Organisationnelle</h3>
+                            <h4 class="text-primary font-medium mb-3">EMIT Fianarantsoa</h4>
+                            <p class="text-gray-700">Formation complète en communication, relations publiques et multimédia. Acquisition de compétences fondamentales en stratégie de communication, techniques de relations publiques et outils numériques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4 heading text-center text-gray-900">Compétences</h2>
+            <div class="w-20 h-1 bg-primary mx-auto mb-12"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <div class="w-8 h-8 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-2">
+                            <i class="ri-computer-line"></i>
+                        </div>
+                        Compétences Techniques
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Photoshop</span>
+                                <span class="text-sm text-gray-500">75%</span>
+                            </div>
+                            <input type="range" min="0" max="100" value="75" class="w-full" disabled>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">PowerPoint</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <input type="range" min="0" max="100" value="90" class="w-full" disabled>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Word</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <input type="range" min="0" max="100" value="85" class="w-full" disabled>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Excel</span>
+                                <span class="text-sm text-gray-500">70%</span>
+                            </div>
+                            <input type="range" min="0" max="100" value="70" class="w-full" disabled>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <div class="w-8 h-8 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-2">
+                            <i class="ri-team-line"></i>
+                        </div>
+                        Compétences Relationnelles
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Communication</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <input type="range" min="0" max="100" value="95" class="w-full" disabled>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Relations publiques</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <input type="range" min="0" max="100" value="85" class="w-full" disabled>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Travail en équipe</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <input type="range" min="0" max="100" value="90" class="w-full" disabled>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Gestion de projet</span>
+                                <span class="text-sm text-gray-500">80%</span>
+                            </div>
+                            <input type="range" min="0" max="100" value="80" class="w-full" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Interests Section -->
+    <section id="interests" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4 heading text-center text-gray-900">Centres d'intérêt</h2>
+            <div class="w-20 h-1 bg-primary mx-auto mb-12"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition group">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-full mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="ri-book-open-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Lecture</h3>
+                    <p class="text-gray-700 text-center">Passionnée par les romans contemporains et les ouvrages sur le développement personnel et la communication.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition group">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-full mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="ri-mic-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Chant</h3>
+                    <p class="text-gray-700 text-center">Membre d'une chorale depuis plusieurs années, j'apprécie particulièrement le chant choral et la musique gospel.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition group">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-full mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="ri-basketball-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Basket-ball</h3>
+                    <p class="text-gray-700 text-center">Pratiquante régulière de basket-ball, ce sport m'aide à développer mon esprit d'équipe et ma persévérance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4 heading text-center text-gray-900">Contact</h2>
+            <div class="w-20 h-1 bg-primary mx-auto mb-12"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-6">Mes coordonnées</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 mt-1 flex-shrink-0">
+                                    <i class="ri-phone-line"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700 mb-1">Téléphone</h4>
+                                    <p class="text-gray-600">0341638405</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 mt-1 flex-shrink-0">
+                                    <i class="ri-mail-line"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700 mb-1">Email</h4>
+                                    <p class="text-gray-600">mariamnefenosoa@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 mt-1 flex-shrink-0">
+                                    <i class="ri-map-pin-line"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700 mb-1">Adresse</h4>
+                                    <p class="text-gray-600">Ambatotokana, Fianarantsoa, Madagascar</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium text-gray-700 mb-3">Réseaux sociaux</h4>
+                            <div class="flex space-x-3">
+                                <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-200 hover:bg-primary hover:text-white text-gray-600 rounded-full transition">
+                                    <i class="ri-linkedin-line"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-200 hover:bg-primary hover:text-white text-gray-600 rounded-full transition">
+                                    <i class="ri-twitter-line"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-200 hover:bg-primary hover:text-white text-gray-600 rounded-full transition">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Votre nom">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Votre email">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Sujet de votre message">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Votre message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="px-6 py-3 bg-primary text-white font-medium !rounded-button hover:bg-primary/90 transition shadow-sm whitespace-nowrap">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">© 2025 Mariam Nefenosoa. Tous droits réservés.</p>
+                </div>
+                
+                <div>
+                    <a href="#" class="px-6 py-2 border border-gray-700 text-gray-300 font-medium !rounded-button hover:bg-gray-800 transition whitespace-nowrap">
+                        <i class="ri-download-line mr-2"></i>Télécharger CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
