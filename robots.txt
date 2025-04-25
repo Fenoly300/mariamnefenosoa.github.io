@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fenoly300.github.io/mariamnefenosoa.github.io/sitemap.xml
